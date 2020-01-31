@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
-import SearchForm from "./SearchForm";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -37,13 +37,14 @@ export default function CharacterList() {
       <h2>Character List: </h2>
       <div className="search-bar">
         <form className="search">
+          <FontAwesomeIcon className="icon" icon={faSearch} />
           <input
             type="text"
             onChange={handleInputChange}
             value={query}
             name="name"
             className="search-name"
-            placeholder="search by name"
+            placeholder="Search by name..."
             autoComplete="off"
           />
         </form>

@@ -13,9 +13,7 @@ function App() {
         <nav className="nav">
           <ul>
             <li>
-              <Link className="links" to="/">
-                Welcome!
-              </Link>
+              <Link to="/">Welcome!</Link>
             </li>
             <li>
               <Link to="/characters">Characters</Link>
